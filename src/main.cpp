@@ -91,9 +91,9 @@ void loop() {
   // sospende il task ad alta priorità per un certo numero di volte
   for(int i = 0; i<3; i++) {
     vTaskSuspend(task2);
-    vTaskDelay(2000 / portTICK_PERIOD_MS);
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
     vTaskResume(task2);
-    vTaskDelay(2000 / portTICK_PERIOD_MS);
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
 
   // termina il task1 (quello a bassa priorità)
